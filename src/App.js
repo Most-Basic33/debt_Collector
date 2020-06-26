@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       url: 'http://localHost:3333/api/debtors',
-      debts: []
+      debts: [],
+      total:[],
     }
   }
   componentDidMount() {

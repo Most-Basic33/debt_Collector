@@ -10,7 +10,7 @@ app.post('/api/debtors', ctrl.addDebtor)//add new debtors
 app.put('/api/debtors/:id', ctrl.updateAmount)//update amount owed
 app.delete('/api/debtors/:id', ctrl.deleteDebtor)//Delete Debtors by id
 app.delete('/api/debtors', ctrl.deleteAllDebtors)//delete all
-app.get('/api/debtors')
+app.get('/api/debtor', ctrl.totalOwed)//get count of whats of owe
 //Possibly display the time on the card
 
 

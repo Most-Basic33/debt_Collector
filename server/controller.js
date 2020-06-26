@@ -1,9 +1,11 @@
-let debts = require('../debts.json')
+let debts = require('../debts.json');
+let totalOwed = require('../totalmoney.json')
+const e = require('express');
 const date1 = new Date()
 let log = console.log
 
 
-log(date1.toLocaleString());
+//log(date1.toLocaleString());
 //const time = date1;
 module.exports = {
 
@@ -13,12 +15,8 @@ module.exports = {
     },
     searchID: (req, res) => {
         let debtorsID = debts.find((e) => e.id === +req.params.id)
-        log(debtorsID, "debtorsID")
-      
 
 
-        //let fullID = '';
-       
         res.status(200).send(debtorsID)
     },
     addDebtor: (req, res) => {
@@ -29,7 +27,7 @@ module.exports = {
             reason: req.body.reason,
             amount: req.body.amount,
             date: date1,
-           
+
         }
         debts.push(newDebtor)
         res.status(200).send(debts)
@@ -51,17 +49,37 @@ module.exports = {
             date: date1
         }
 
-        log(empty['date'])
-        //debts.push(empty)
+
         debts = [{ ...empty }];
         res.status(200).send(debts)
     },
     updateAmount: (req, res) => {
 
-        //    log(req.params.id)
         let index = debts.find(e => e.id === +req.params.id)
         index['amount'] = req.body.amount;
-        log(index)
+
         res.status(200).send(debts)
+    },
+    totalOwed: (req, res) => {
+        let total = []
+        for (key in debts) {
+            total.push(debts[key].amount);
+        }
+        let ans = total.reduce((a, b) => a + b)
+        //log(total,"last one")
+        log(ans)
+        totalOwed.splice(0, 1, ans)
+        // log(totalOwed,"totalowed")
+        res.status(200).send(totalOwed)
     }
 }
+// let total = []
+// for (key in debts) {
+//     total.push(debts[key].amount);
+// }
+// let ans = total.reduce((a, b) => a + b)
+// //log(total,"last one")
+// log(ans) 
+
+
+
