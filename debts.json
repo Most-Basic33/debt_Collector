@@ -5,7 +5,8 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     },
     {
         "id":1,
@@ -13,7 +14,8 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     },
     {
         "id":2,
@@ -21,7 +23,8 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     },
     {
         "id":3,
@@ -29,7 +32,8 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     },
     {
         "id":4,
@@ -37,7 +41,8 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     },
     {
         "id":5,
@@ -45,6 +50,7 @@
         "phone":"480-259-6950",
         "reason":"Borrowed 50 bucks",
         "amount":75,
-        "date":"6/26/20"
+        "date":"6/26/20",
+        "time":"4:20:00"
     }
 ]
